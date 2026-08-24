@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victor — AI/ML Internship Portfolio</title>
+<title>Victor Ezeani — AI/ML Internship Portfolio</title>
 <meta name="description" content="I don't just use AI. I know when to trust it — and when not to. Proof of AI/ML judgment from a live 8-week internship.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -203,9 +203,19 @@
   }
   .about-copy p{color:var(--ink-muted);margin-bottom:18px;font-size:16px;max-width:60ch;}
   .about-copy p:last-child{color:var(--ink);}
+  .about-photo{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:4px;
+    border:1px solid var(--hairline);
+    margin-top:24px;
+    filter:grayscale(15%);
+  }
   @media (max-width:720px){
     .about-grid{grid-template-columns:1fr;}
     .about-grid .divider{display:none;}
+    .about-photo{max-width:260px;}
   }
 
   /* contact */
@@ -263,7 +273,7 @@
 
 <header>
   <nav>
-    <a href="#top" class="wordmark">VICTOR</a>
+    <a href="#top" class="wordmark">VICTOR EZEANI</a>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -289,7 +299,7 @@
   <section id="work" class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow mono">Proof of work</div>
-      <h2 class="display">Two judgment calls, under load</h2>
+      <h2 class="display">Three judgment calls, under load</h2>
     </div>
 
     <div class="plate reveal">
@@ -318,6 +328,19 @@
       <div class="finding">→ <strong>Observed, not proven:</strong> in this dataset, search volume alone didn't predict traffic.</div>
     </div>
 
+    <div class="plate reveal">
+      <span class="plate-index">Case study 03</span>
+      <h3>Content archetype clustering: catching a bug the script wouldn't have flagged</h3>
+      <p>Businesses with large content inventories rarely have a real system for catching what's working and what isn't — it's manual, inconsistent, or it just doesn't happen. I'm building toward closing that gap with a content archetype clustering model. I delegated the initial data pull and clustering setup to Claude, working off FlyRank's own dataset. The output looked fine until I checked it: one metric showed an average CTR of 2.7 for an article — impossible, since CTR caps at 1.0. I asked Claude to check the distribution and found 5.6% of 30,000 rows had inconsistent scaling (percentages mixed with decimals). I verified the raw cell output myself before authorizing the fix, then made the call to apply it — knowingly an inferred solution, not a root-cause-proven one.</p>
+      <div class="tags">
+        <span class="tag">Delegated</span>
+        <span class="tag-arrow">the data pull &amp; clustering setup</span>
+        <span class="tag" style="margin-left:8px;">My call</span>
+        <span class="tag-arrow">catching &amp; verifying the scaling bug</span>
+      </div>
+      <div class="finding">→ <strong>Outcome:</strong> CTR corrected from 2.7 to 0.058 — clean dataset now sits as the starting point for the clustering model.</div>
+    </div>
+
     <div class="intercept-cta reveal">
       <span>Convinced?</span>
       <a href="mailto:vezeani22@gmail.com" class="link-ghost">vezeani22@gmail.com →</a>
@@ -331,10 +354,11 @@
       <div class="reveal">
         <div class="eyebrow mono">About</div>
         <p class="about-label">No coding background.<br>That's not the pitch.</p>
+        <img src="victor-ezeani.jpg" alt="Victor Ezeani" class="about-photo">
       </div>
       <div class="divider" aria-hidden="true"></div>
       <div class="about-copy reveal">
-        <p>I'm Victor. I'm currently in FlyRank's 8-week AI/ML internship, working across general AI fluency and applied ML — including hands-on data annotation and my first real ML pipeline work, both covered above.</p>
+        <p>I'm Victor Ezeani. I'm currently in FlyRank's 8-week AI/ML internship, working across general AI fluency and applied ML — including hands-on data annotation, my first real ML pipeline work, and ongoing content archetype clustering work, all covered above.</p>
         <p>I came into this without a coding background. What I bring instead is judgment: knowing when AI execution is enough, and when a result needs a human check before it's trusted. That's the skill this internship is sharpening, and it's the one I'm offering.</p>
         <p>I'm remote-ready now, and open to relocating for the right opportunity.</p>
       </div>
@@ -351,7 +375,7 @@
   </section>
 </main>
 
-<footer>Victor &middot; AI/ML Fluency Internship &middot; Built week 2 of 8</footer>
+<footer>Victor Ezeani &middot; AI/ML Fluency Internship &middot; Built week 2 of 8</footer>
 
 <script>
   const io = new IntersectionObserver((entries) => {
